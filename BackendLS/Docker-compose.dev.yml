@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+  app-ms-dev:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    image: image-app-ms-dev
+    container_name: app-ctn-dev
+    ports:
+    - "9501:4000"
+    environment:
+      - PORT=4000
+      - MONGO_HOST=mongo-app-ms-dev
+      - MONGO_PORT=27017
+      - MONGO_USERNAME=root
+      - MONGO_PASSWORD=12345
+    depends_on:
+      - mongo-app-ms-dev
+    restart: always
+    networks:
+      - net-app-dev
+
+  mongo-app-ms-dev:
+    image: mongo:3.6
+    container_name: mongo-app-ctn-dev
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-app-volume-dev:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 12345
+    networks:
+      - net-app-dev
+
+volumes:
+  mongo-app-volume-dev:
+
+networks:
+  net-app-dev:

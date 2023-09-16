@@ -1,0 +1,26 @@
+[
+  {
+    "number": "01",
+    "arrow": "images/icon/process-arrow-1-1.png",
+    "arrow2": "images/icon/process-arrow-2-1.png",
+    "icon": "images/icon/process-1-4.png",
+    "title": "Análisis y Diseño",
+    "text": "Acercamiento al negocio y formulación de los requerimientos funcionales como entregable."
+  },
+  {
+    "number": "02",
+    "arrow": "images/icon/process-arrow-1-1.png",
+    "arrow2": "images/icon/process-arrow-2-1.png",
+    "icon": "images/icon/process-1-1.png",
+    "title": "Construcción y Validación",
+    "text": "Desarrollo del producto de software y validaciones unitarias de los componentes del mismo."
+  },
+  {
+    "number": "03",
+    "arrow": "images/icon/process-arrow-1-1.png",
+    "arrow2": "images/icon/process-arrow-2-1.png",
+    "icon": "images/icon/process-1-2.png",
+    "title": "Despliegue e Implementación",
+    "text": "Preparación del ambiente y capacitación del uso del producto."
+  }
+]

@@ -1,0 +1,15 @@
+FROM node:16.1-alpine3.13
+
+#ARG BASE_DIR="app-ms"
+
+WORKDIR /app/BackendLS
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+CMD ["npm", "run", "serve"]

@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: frontend-dev
+    image: frontend-dev 
+    build:
+      context: ./FrontendLS
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./FrontendLS/src:/app/frontend/src
+      - ./WebServer/log/access.log:/var/log/nginx/access.log
+      - ./WebServer/log/error.log:/var/log/nginx/error.log
+    ports:
+      - 3000:3000
